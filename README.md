@@ -1,70 +1,102 @@
-# Getting Started with Create React App
+<h1 align="center">AroundHome Bookings</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<img width="1438" alt="Screenshot 2021-11-25 at 19 21 02" src="https://user-images.githubusercontent.com/43752457/143487638-a9ac67b5-c4d7-407c-bfb4-044b82747599.png">
 
-## Available Scripts
+<!-- TABLE OF CONTENTS -->
+<details open="open">
+  <summary>Table of Contents</summary>
+  <ol>
+    <li><a href="#about-the-project">About The Project</a></li>
+    <li><a href="#built-with">Built With</a></li>
+    <li><a href="#dependencies">Dependencies</a></li>
+    <li><a href="#design-reasoning">Design Reasoning</a></li>
+    <li><a href="#API">API</a></li>
+    <li><a href="#getting-started">Getting Started</a></li>
+  </ol>
+</details>
 
-In the project directory, you can run:
+## About The Project
 
-### `yarn start`
+A simple SPA displaying companies available time slots while allowing them to make an appointment.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Key Features
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- Modern and Clean UI
+- Extremely easy to use and intuitive
+- Display a list of companies and their available time slots
+- Teastable & Scalable
+- Resposinve to different screen sizes
 
-### `yarn test`
+## Built With:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [React](https://reactjs.org/)
+- [Ant Design](https://ant.design/)
+- [Mobiscroll](https://mobiscroll.com/)
+- [Redux Toolkit](https://redux-toolkit.js.org/)
+- [VS Code](https://code.visualstudio.com/)
+- [Git](https://git-scm.com/)
 
-### `yarn build`
+### Dependencies
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- React Icons
+- Ant Design Icons
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Design Reasoning
 
-### `yarn eject`
+The app was initialised with create-react-app.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+It retrives the data from a dedicated [JSON SERVER API](https://github.com/edisonabdiel/RomeoTaskDB) and displays it in cohesive manner.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Components were built in a fashion that allows for a more responsive, dynamic and scalable experience.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+The UI is meant to be minimalistic yet engaging and intuitive. It was built using AntDesign to allow great control and autonomy over the layout of the app and also the design/feel of all the elements within it.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+## API
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Refer to the ```server``` folder for more information on how to get the server running and how to use it.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```cd``` into the ```server``` folder and run the following command:
 
-### Code Splitting
+```json-server timeslots.json``` 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+| method | path               | description            |
+|--------|--------------------|------------------------|
+| GET    | /api/timeslots     | Get list of timeslots  |
 
-### Analyzing the Bundle Size
+Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Getting Started
 
-### Making a Progressive Web App
+Clone the repository and run the following commands in the terminal:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Install the dependencies 
 
-### Advanced Configuration
+```bash
+npm install
+# or
+yarn add install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Run the development server:
 
-### Deployment
+```bash
+npm run dev
+# or
+yarn dev
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Build 
 
-### `yarn build` fails to minify
+```bash
+npm run build
+# or
+yarn build
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+Open [http://localhost:3001](http://localhost:3001) in your browser to see the result.
+
+
+<h4 align="center">Made with loads of ❤️‍🔥</h4>
