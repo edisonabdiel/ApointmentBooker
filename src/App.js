@@ -1,17 +1,16 @@
-import React from 'react';
+//Custom components
 import CompaniesList from './components/CompaniesList';
-import AppointmentPicker from './components/AppointmentPicker';
-
+//Services
 import { useGetTimeslotsQuery } from './services/aroundhomeApi';
-
+//Styles
 import './App.css'
 
 const App = () => {
 
-    const { data: timeslots, loading, error } = useGetTimeslotsQuery();
+    const { data: timeslots, isLoading, error } = useGetTimeslotsQuery();
 
     return (
-        <div className="app">
+        <div className="main">
             <CompaniesList timeslots={timeslots} />
         </div>
     )
