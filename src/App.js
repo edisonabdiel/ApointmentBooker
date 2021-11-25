@@ -1,5 +1,5 @@
 //Custom components
-import {CompaniesList, Navbar} from './components';
+import {CompaniesList, Navbar, Loader } from './components';
 //Services
 import { useGetTimeslotsQuery } from './services/aroundhomeApi';
 //Styles
@@ -8,6 +8,8 @@ import './App.css'
 const App = () => {
 
     const { data: timeslots, isLoading, error } = useGetTimeslotsQuery();
+
+    if (isLoading) return <Loader />;
 
     return (
         <div className="main">
