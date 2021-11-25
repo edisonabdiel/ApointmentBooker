@@ -1,5 +1,5 @@
 //Custom components
-import CompaniesList from './components/CompaniesList';
+import {CompaniesList, Navbar} from './components';
 //Services
 import { useGetTimeslotsQuery } from './services/aroundhomeApi';
 //Styles
@@ -11,6 +11,7 @@ const App = () => {
 
     return (
         <div className="main">
+            <Navbar />
             <CompaniesList timeslots={timeslots} />
         </div>
     )
