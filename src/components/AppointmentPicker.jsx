@@ -1,22 +1,21 @@
 import React, {useState, useCallback} from 'react';
 import '@mobiscroll/react/dist/css/mobiscroll.min.css';
-import { Datepicker, Page, getJson, setOptions, localeDe } from '@mobiscroll/react';
+import { Datepicker, Page, setOptions, localeDe } from '@mobiscroll/react';
 
 setOptions({
     locale: localeDe,
-    theme: 'ios',
-    themeVariant: 'light'
+    theme: 'auto',
+    themeVariant: 'dark'
 });
 
-const AppointmentPicker = ({ timeslot }) => {
+const AppointmentPicker = ({ start, end }) => {
 
-    const start = timeslot.time_slots.map(time => time.start_time);
-    const end = timeslot.time_slots.map(time => time.end_time);
-
-    console.log(start)
 
     const min = start[0];
-    const max = end[0];
+    const max = end[1];
+
+
+    console.log(start, end); 
 
     const [datetimeLabels, setDatetimeLabels] = useState([]);
     const [datetimeInvalid, setDatetimeInvalid] = useState([]);
@@ -30,28 +29,21 @@ const AppointmentPicker = ({ timeslot }) => {
     }, []);
 
     
-    const getDatetimes = (d, callback) => {
-        let invalid = [];
-        let labels = [];
-
-        getJson('https://trial.mobiscroll.com/getbookingtime/?year=' + d.getFullYear() + '&month=' + d.getMonth(), (bookings) => {
-            for (let i = 0; i < bookings.length; ++i) {
-                const booking = bookings[i];
-                const bDate = new Date(booking.d);
-
-                if (booking.nr > 0) {
-                    labels.push({
-                        start: bDate,
-                        title: booking.nr + ' SPOTS',
-                        textColor: '#e1528f'
-                    });
-                    invalid = [...invalid, ...booking.invalid];
-                } else {
-                    invalid.push(d);
-                }
-            }
-            callback({ labels: labels, invalid: invalid });
-        }, 'jsonp');
+    const getDatetimes = () => {
+        // a function that sets the labels and invalid dates for the datepicker based on the start and end times
+        const labels = [];
+        const invalid = [];
+        for (let i = 0; i < start.length; i++) {
+            labels.push(start[i] + ' - ' + end[i]);
+            invalid.push({
+                start: start[i],
+                end: end[i]
+            });
+        }
+        return {
+            labels: labels,
+            invalid: invalid
+        };
     }
 
     return (
