@@ -1,8 +1,7 @@
-import React from 'react';
-
+// Ant Design Components
 import { Collapse, Card } from 'antd';
-
-import AppointmentPicker from './AppointmentPicker';
+// Custom Components
+import {AppointmentPicker} from './';
 
 const { Panel } = Collapse;
 

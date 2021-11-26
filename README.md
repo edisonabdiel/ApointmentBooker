@@ -50,6 +50,8 @@ It retrives the data from a dedicated [JSON SERVER API](https://github.com/ediso
 
 Components were built in a fashion that allows for a more responsive, dynamic and scalable experience.
 
+The Calendar component was built using [Mobiscroll](https://mobiscroll.com/).
+
 The UI is meant to be minimalistic yet engaging and intuitive. It was built using AntDesign to allow great control and autonomy over the layout of the app and also the design/feel of all the elements within it.
 
 

@@ -1,7 +1,5 @@
-import React from 'react';
-
-import CompanyCard from './CompanyCard';
-
+// Custom Components
+import {CompanyCard} from './';
 
 const CompaniesList = ({ timeslots }) =>  (
         <div className="companies-wrapper">

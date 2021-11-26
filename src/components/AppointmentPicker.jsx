@@ -1,7 +1,9 @@
-import React, {useState, useCallback} from 'react';
+// React Hooks
+import { useState, useCallback } from 'react';
+// Calendar
 import '@mobiscroll/react/dist/css/mobiscroll.min.css';
 import { Datepicker, Page, setOptions, localeDe } from '@mobiscroll/react';
-
+// Calendar config
 setOptions({
     locale: localeDe,
     theme: 'auto',
@@ -10,16 +12,11 @@ setOptions({
 
 const AppointmentPicker = ({ start, end }) => {
 
-
     const min = start[0];
     const max = end[1];
 
-
-    console.log(start, end); 
-
     const [datetimeLabels, setDatetimeLabels] = useState([]);
     const [datetimeInvalid, setDatetimeInvalid] = useState([]);
-    
     
     const onPageLoadingDatetime = useCallback((event, inst) => {
         getDatetimes(event.firstDay, (bookings) => {
@@ -28,7 +25,6 @@ const AppointmentPicker = ({ start, end }) => {
         });
     }, []);
 
-    
     const getDatetimes = () => {
         // a function that sets the labels and invalid dates for the datepicker based on the start and end times
         const labels = [];

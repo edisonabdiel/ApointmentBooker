@@ -8,7 +8,7 @@ To get the server started, you need to install the following dependency:
 
 Start server on [http://localhost:3000](http://localhost:3000) by runninng the following command:
 
-- json-server  cosuno.json
+- json-server  timeslots.json
 
 ## Endpoints
 
