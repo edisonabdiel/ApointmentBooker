@@ -1,6 +1,6 @@
 <h1 align="center">AroundHome Bookings</h1>
 
-<img width="1438" alt="Screenshot 2021-11-25 at 19 21 02" src="https://user-images.githubusercontent.com/43752457/143487638-a9ac67b5-c4d7-407c-bfb4-044b82747599.png">
+<img width="1438" alt="Screenshot 2021-11-26 at 14 49 52" src="https://user-images.githubusercontent.com/43752457/143590954-f72593b0-a326-4159-88a4-064a2dbe23ee.png">
 
 <!-- TABLE OF CONTENTS -->
 <details open="open">
